@@ -30,7 +30,6 @@ function fetchData(pokemon) {
 
 function renderPokemon(banana) {
   console.log("rendering");
-
   var newDiv = document.createElement("div");
   newDiv.classList.add("poke-container");
   var newContent = document.createTextNode(banana.data.name);
@@ -44,9 +43,13 @@ function renderPokemon(banana) {
 }
 
 function clearList() {
-  let allPokemonContainer = document.getElementById("div1");
-  console.log(allPokemonContainer);
-  allPokemonContainer.remove(allPokemonContainer);
+  let allElements = document.querySelectorAll(".poke-container");
+  allElements.forEach((el) => el.remove()); // for Each element
+  document.getElementById("pokemonImg").src = "";
+
+  document.getElementById("pokemonName").innerHTML = "";
+
+  document.getElementById("pokemonInfos").innerText = "";
 }
 function getPokemonInfo(theId) {
   pokeapi
