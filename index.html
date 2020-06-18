@@ -9,18 +9,27 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <h1>Pokemons infos</h1>
+    <h1>Pokedex basic</h1>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!--  use input's id to grab the value from the input field -->
-    <input id="theInput" type="text" />
-    <button id="theButton">Get the Pokemon</button>
+    <input id="theInput" type="text" placeholder="id or name" />
+    <button id="theButton">Get this Pokemon</button>
+    <button id="randomButton">Get first 25 pokemons</button>
+    <button id="clearButton">Clear List</button>
+
 
     <!-- the data we get from the API will be populated in here:   -->
-    <h2 id="pokemonName"></h2>
-    <img src="" id="pokemonImg" />
-    <p id="pokemonInfos"></p>
+    <div id="poke-container"></div>
+    <div class="card">
+      <h2 id="pokemonName"></h2>
+      <img src="" id="pokemonImg" />
+      <p id="pokemonInfos"></p>
+      <p id="pokemonDescription"></p>
+    </div>
 
+    <link />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </body>
